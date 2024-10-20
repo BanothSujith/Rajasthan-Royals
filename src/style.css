@@ -306,8 +306,8 @@ margin: 3rem;
     width:300px;
     overflow:hidden;
     gap:1rem;
-    padding: 0.5rem 0rem;
-    margin-left: 2rem;
+    padding: 0.5rem 0;
+    margin-left: 0;
   }
   .home-left p{
     text-align: center;
@@ -361,8 +361,8 @@ overflow:hidden;
     width:100%;
   }
   .home-right{
-    height:200px;
-    width:300px;
+    height:400px;
+    width:500px;
     overflow:hidden;
   }
   .home-right p{
@@ -374,7 +374,7 @@ overflow:hidden;
     overflow:hidden;
     gap:1rem;
     padding: 0.5rem 0rem;
-    margin-left: 2rem;
+    margin-left:0;
   }
   .home-left p{
     text-align: center;
