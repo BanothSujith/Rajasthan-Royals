@@ -6,8 +6,7 @@ const products = [
   { name: 'Jursey', price: 20, orginalPrice:100, image: './img/p1.png' },
   { name: 'Cricket Bat', price: 30, orginalPrice:200, image: './img/bat.png' },
   { name: 'Cap', price: 25, orginalPrice:70,  image: './img/cap.png' },
-  { name: 'Water Bottle', price: 40, orginalPrice:150, image: './img/water.png' },
-  // Add more products as needed
+  { name: 'Water Bottle', price: 40, orginalPrice:150, image: './img/water.png' }
 ];
 
 function Shopping() {
