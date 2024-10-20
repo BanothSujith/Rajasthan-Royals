@@ -37,10 +37,9 @@
     display: grid;
     grid-template-columns: 40% 50%;
     grid-template-rows: auto;
-    column-gap: 5%;
+    column-gap: 8%;
     align-items: center;
     justify-items: center;
-    row-gap: 20px;
     color:aliceblue;
     height: 100vh;
     background: linear-gradient(to right, rgb(114, 27, 94), rgb(0, 0, 0));
@@ -70,54 +69,24 @@
     height:40vh;
     width: auto;
 }
-
-
-@media (max-width: 708px) {
-    .home {
-        grid-template-columns: 1fr; 
-        height: auto; 
-        padding: 1rem; 
-    }
-
-    .home-left{
-      display: none;
-    } .home-right {
-      height: auto;
-        min-width: 70%; 
-        max-width: 250px;
-        overflow: hidden;
-    }
-
-    .nav-bar {
-       display: none;
-    }
-     .home-right img{
-      height:40vh;
-      width: 100%;
-  }
- 
-}
-@media (max-width: 480px) {
-    .home-left, .home-right {
-        padding: 0.5rem; 
-    }
-   
-   .home-right img{
-    height:40vh;
-    width: 100%;
-}
-    
-}
-.player-grid {
-    background: linear-gradient(to right, rgb(114, 27, 94), rgb(0, 0, 0));
-}
-
 .player-card {
-    padding:2rem;
+    padding:1rem;
     background-color: #85225b;
     border-radius: 8px;
     text-align: center;
     color:white;
+    width:250px;
+    height:auto;
+    transition: .3s ease-out;
+}
+.player-card:hover{
+  background: #ec5ea1;
+  transform:scale(1.1);
+  box-shadow: 2px 3px 10px #f3136c;
+
+}
+.player-card:active{
+  background: #333;
 }
 .contact-section {
     display: grid;
@@ -157,12 +126,10 @@
     background-color:#e900c6 ;
     text-align: center;
 }
-
-/* Shopping Section */
 .shopping-section {
     padding: 4rem 2rem;
     background: linear-gradient(to bottom, rgb(114, 27, 94), rgb(0, 0, 0));
-height: 100%;
+height: auto;
   }
   .header{
     display: flex;
@@ -171,7 +138,7 @@ height: 100%;
   }
   
   .section-title {
-    text-align: center;
+    text-align:left;
     margin-bottom: 2rem;
     font-size: 2rem;
     color: #ffffff;
@@ -184,8 +151,11 @@ height: 100%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 250px;
+    transition: .2s ease-in ;
   }
-  
+  .product-card:hover{
+    transform: scale(1.1);
+  }
   .product-card img {
     max-width: 100%;
     height: auto;
@@ -268,47 +238,175 @@ flex-basis: 200px;
       flex-basis:25%;
       flex-direction: row;
      }
-     .players-section {
-      height: 100vh;
-      overflow-x: hidden;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      background-color: #f0f0f0;
+     .homeplayer{
       background: linear-gradient(to left, rgb(114, 27, 94), rgb(0, 0, 0));
-  }
-  
+      height: 100vh;
+      padding: 20px;
+     }
+     .homeplayer h2{
+      color:white;
+      text-align: center;
+      padding: 30px;
+     }
   .player-grid{
-    display: flex; 
+    display: grid; 
     gap: 40px;
-    flex-basis:33.33%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width:100vw;
-    align-items: flex-start;
+    grid-template-columns: auto auto auto;
+    margin: 2rem;
 }
 .players-grid{
-  display: flex; 
-  gap: 40px;
-  flex-basis: 33.33%;
-flex-wrap: wrap;
-  justify-content: space-between;
-  width:100vw;
+  display:grid; 
+  grid-template-columns: auto auto auto;
+  gap: 20px;
   background: linear-gradient(to top, rgb(114, 27, 94), rgb(0, 0, 0));
-
+  height: 100%;
+  padding-top: 5rem;
 }
-.players-section-link {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+.homeplayer a{
+display: inline-block;
+text-align: center;
+padding:10px;
+background-color: #037dff;
+border-radius: 4px;
+color: whitesmoke;
+text-decoration: none;
+margin: 3rem;
 }
 
-.players-section-link:hover {
+.homeplayer a:hover {
   background-color: #0056b3; /* Hover effect */
+}
+
+@media (min-width:200px) and (max-width: 500px) {
+  .nav-bar{
+    display: none;
+  }
+  .home{
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background: linear-gradient(to top, rgb(114, 27, 94), rgb(0, 0, 0));
+  }
+  .home-right img{
+    height:40vh;
+    width:100%;
+  }
+  .home-right{
+    height:200px;
+    width:300px;
+    overflow:hidden;
+  }
+  .home-right p{
+    display: none;
+  }
+  .home-left{
+    height:100px;
+    width:300px;
+    overflow:hidden;
+    gap:1rem;
+    padding: 0.5rem 0rem;
+    margin-left: 2rem;
+  }
+  .home-left p{
+    text-align: center;
+    padding-top: 30px;
+  }
+  .home-left h2{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+ 
+  .player-grid{
+    display: grid;
+    grid-template-columns: auto;
+    gap:10px;
+    justify-content: space-around;
+overflow:hidden;
+
+  }
+  .players-grid{
+    display:grid; 
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding:10px;
+
+  }
+
+.homeplayer h2{
+  color:white;
+  text-align: center;
+  padding: 0px;
+ }
+ .homeplayer{
+  height: auto;
+ }
+
+}
+@media (min-width:501px) and (max-width: 1000px) {
+ 
+  .home{
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    gap:10%;
+    background: linear-gradient(to top, rgb(114, 27, 94), rgb(0, 0, 0));
+  }
+  .home-right img{
+    height:40vh;
+    width:100%;
+  }
+  .home-right{
+    height:200px;
+    width:300px;
+    overflow:hidden;
+  }
+  .home-right p{
+    display: none;
+  }
+  .home-left{
+    height:100px;
+    width:300px;
+    overflow:hidden;
+    gap:1rem;
+    padding: 0.5rem 0rem;
+    margin-left: 2rem;
+  }
+  .home-left p{
+    text-align: center;
+    padding-top: 30px;
+  }
+  .home-left h2{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+ 
+
+  .players-grid{
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding:10px;
+
+  }
+  .player-grid{
+    display: grid; 
+    gap: 5px;
+    grid-template-columns: auto auto;
+    height:auto;
+}
+.homeplayer h2{
+  color:white;
+  text-align: center;
+  padding: 0px;
+ }
+ .homeplayer{
+  height: auto;
+ }
 }

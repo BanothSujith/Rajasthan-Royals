@@ -13,11 +13,11 @@ function Home() {
 Sanju Samson, a calm yet aggressive leader, inspires Rajasthan Royals with fearless cricket and tactical acumen as captain.`
         },
         {
-            heading:'Royals Squard',
+            heading:'Rajsthan Royals Squard',
             text:`Rajasthan Royals: A team filled with young talent and seasoned players.`
         },
         {
-            heading:'Royals practice session',
+            heading:'Royals practice session in nets',
             text:` Our squad is hitting the nets, gearing up for the season, and we’d love for you to be part of it!`
         }
     ];

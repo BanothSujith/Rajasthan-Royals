@@ -23,9 +23,9 @@ const players = [
 
 function Players() {
     return (
+        <div class='homeplayer'>
+            <h2 >Meet Our Players</h2>
         <div className="players-section">
-        <h2 style={{ marginTop: '20px', color: 'white' }}>Meet Our Players</h2>
-    
         <div className="player-grid">
             {players.slice(0, 6).map((player, index) => (
                 <div key={index}>
@@ -33,18 +33,13 @@ function Players() {
                 </div>
             ))}
         </div>
-    
-        <div className="button-container">
-            <a 
-                href="/Squard" 
-                className="players-section-link"
-            >
+        </div >
+        <div style={{textAlign:'center'}}>
+            <a href="/Squard">
                 Go to Players Section
             </a>
+            </div>
         </div>
-    </div>
-    
-        
     );
 }
 

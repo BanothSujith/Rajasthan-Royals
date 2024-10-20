@@ -23,7 +23,6 @@ const players = [
 function Squard() {
     return (
         <>
-        <h1 style={{textAlign:'center', color:'white'}}>Players</h1>
         <div className='players-grid'>
             {players.map((player, index) => (
                 <PlayerCard key={index} player={player} />
