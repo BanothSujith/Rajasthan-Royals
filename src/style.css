@@ -290,7 +290,7 @@ margin: 3rem;
     background: linear-gradient(to top, rgb(114, 27, 94), rgb(0, 0, 0));
   }
   .home-right img{
-    height:200px;
+    height:40vh;
     width:100%;
   }
   .home-right{
@@ -357,7 +357,7 @@ overflow:hidden;
     background: linear-gradient(to top, rgb(114, 27, 94), rgb(0, 0, 0));
   }
   .home-right img{
-    height:200px;
+    height:40vh;
     width:100%;
   }
   .home-right{
